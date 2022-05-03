@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SiteHeader />
+    <SiteMain />
+
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SiteHeader from '@/components/HeaderComponent.vue'
+import SiteMain from '@/components/MainComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SiteHeader,
+    SiteMain
   }
 }
 </script>
@@ -21,8 +25,36 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+.container{
+    margin: auto;
+    max-width: 1440px;
+}
+  
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+  
+.col{
+    flex-grow: 1;
+}
+
+.col-5{
+    width: calc(100% / 12) * 5;
+}
+
+.col-7{
+    width: calc(100% / 12) * 7;
+}
+
+/* ROOT Colors */
+:root{
+  --primary: rgba(2, 130, 249, 1);
 }
 </style>
