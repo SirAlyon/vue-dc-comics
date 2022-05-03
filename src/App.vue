@@ -78,6 +78,10 @@ img{
   display: flex;
 }
 
+.align-end{
+  text-align: end;
+}
+
 /* ROOT Colors */
 :root{
   --primary: rgba(2, 130, 249, 1);
