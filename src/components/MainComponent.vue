@@ -48,7 +48,7 @@ export default {
         background-color: rgba(2, 130, 249, 1);
         color: white;
         .actions{
-        height: 200px;
+        height: 170px;
         display: flex;
         justify-content: space-around;
         .action{

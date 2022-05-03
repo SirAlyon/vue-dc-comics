@@ -2,7 +2,7 @@
   <div id="app">
     <SiteHeader />
     <SiteMain />
-
+    <SiteFooter />
     
   </div>
 </template>
@@ -10,12 +10,15 @@
 <script>
 import SiteHeader from '@/components/HeaderComponent.vue'
 import SiteMain from '@/components/MainComponent.vue'
+import SiteFooter from '@/components/FooterComponent.vue'
+
 
 export default {
   name: 'App',
   components: {
     SiteHeader,
-    SiteMain
+    SiteMain,
+    SiteFooter,
   }
 }
 </script>
@@ -27,6 +30,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 
   color: #2c3e50;
+}
+
+/* Common */
+img{
+  max-width: 100%;
 }
 
 .container{
@@ -45,12 +53,29 @@ export default {
     flex-grow: 1;
 }
 
+.col-4{
+    width: calc(100% / 12) * 4;
+}
+
 .col-5{
     width: calc(100% / 12) * 5;
 }
 
+.col-6{
+    width: calc(100% / 12) * 6;
+}
+
 .col-7{
     width: calc(100% / 12) * 7;
+}
+
+.col-8{
+    width: calc(100% / 12) * 8;
+}
+
+/* Utility */
+.d-flex{
+  display: flex;
 }
 
 /* ROOT Colors */
