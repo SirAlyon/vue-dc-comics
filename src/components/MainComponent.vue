@@ -5,25 +5,9 @@
         </div>
         <div class="call_to_actions">
             <div class="actions container">
-                <div class="action">
-                    <img src="@/assets/img/buy-comics-digital-comics.png" alt="">
-                    <span>DIGITAL COMICS</span>
-                </div>
-                <div class="action">
-                    <img src="@/assets/img/buy-comics-merchandise.png" alt="">
-                    <span>DC MERCHANDISE</span>
-                </div>
-                <div class="action">
-                    <img src="@/assets/img/buy-comics-subscriptions.png" alt="">
-                    <span>SUBSCRIPTION</span>
-                </div>
-                <div class="action">
-                    <img src="@/assets/img/buy-comics-shop-locator.png" alt="">
-                    <span>COMIC SHOP LOCATOR</span>
-                </div>
-                <div class="action">
-                    <img src="@/assets/img/buy-dc-power-visa.svg" alt="">
-                    <span>DC POWER VISA</span>
+                <div class="action" v-for="({text, src}, index) in actions" :key="index">
+                    <img :src="src" :alt="text">
+                    <span>{{text}}</span>
                 </div>
             </div>
         </div>
@@ -34,7 +18,33 @@
 
 <script>
 export default {
-    name: 'SiteMain'
+    name: 'SiteMain',
+    data() {
+        return {
+            actions: [
+                {
+                    src: require('@/assets/img/buy-comics-digital-comics.png'),
+                    text: 'DIGITAL COMICS'
+                },
+                {
+                    src: require('@/assets/img/buy-comics-merchandise.png'),
+                    text: 'DC MERCHANDISE'
+                },
+                {
+                    src: require('@/assets/img/buy-comics-subscriptions.png'),
+                    text: 'SUBSCRIPTION'
+                },
+                {
+                    src: require('@/assets/img/buy-comics-shop-locator.png'),
+                    text: 'COMIC SHOP LOCATOR'
+                },
+                {
+                    src: require('@/assets/img/buy-dc-power-visa.svg'),
+                    text: 'DC POWER VISA'
+                }
+            ]
+        }
+    }
 }
 </script>
 

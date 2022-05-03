@@ -64,11 +64,13 @@
                     <div class="col-6">
                         <div class="socials">
                             <span class="follow">FOLLOW US</span>
-                            <img src="@/assets/img/footer-facebook.png" alt="">
-                            <img src="@/assets/img/footer-twitter.png" alt="">
+                            <span v-for="({src, text}, index) in socials" :key="index">
+                                <img :src="src" :alt="text" >   
+                            </span>
+                            <!-- 
                             <img src="@/assets/img/footer-youtube.png" alt="">
                             <img src="@/assets/img/footer-pinterest.png" alt="">
-                            <img src="@/assets/img/footer-periscope.png" alt="">
+                            <img src="@/assets/img/footer-periscope.png" alt=""> -->
                         </div>
                     </div>
                 </div>
@@ -80,7 +82,33 @@
 
 <script>
 export default {
-    name: 'SiteFooter'
+    name: 'SiteFooter',
+    data(){
+        return{
+            socials: [{
+                text: 'Facebook Logo',
+                src: require('@/assets/img/footer-facebook.png')
+            },
+            {
+                text: 'Twitter Logo',
+                src: require('@/assets/img/footer-twitter.png')
+            },
+            {
+                text: 'Youtube Logo',
+                src: require('@/assets/img/footer-youtube.png')
+            },
+            {
+                text: 'Pinterest Logo',
+                src: require('@/assets/img/footer-pinterest.png')
+            },
+            {
+                text: 'Periscope Logo',
+                src: require('@/assets/img/footer-periscope.png')
+            },
+            ]
+            
+        }
+    }
 }
 </script>
 
@@ -126,6 +154,7 @@ export default {
                 height: 40px;
                 width: auto;
                 margin: 0 0.8rem;
+                
             }
             .col-6{
                 display: flex;
@@ -137,6 +166,12 @@ export default {
                 border: 1px solid rgba(2, 130, 249, 1);
                 padding: 0.8rem;
                 font-weight: bold;
+                transition: linear 0.2s;
+                &:hover{
+                    transform: scale(1.1);
+                    color: rgba(2, 130, 249, 1);
+                    border: 1px solid white;
+                }
             }
             .socials{
                 color: rgba(2, 130, 249, 1);
