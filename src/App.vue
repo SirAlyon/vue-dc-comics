@@ -33,6 +33,10 @@ export default {
 }
 
 /* Common */
+*{
+  margin: 0;padding: 0;box-sizing: border-box;
+}
+
 img{
   max-width: 100%;
 }
@@ -80,6 +84,10 @@ img{
 
 .align-end{
   text-align: end;
+}
+
+.p-relative{
+  position: relative;
 }
 
 /* ROOT Colors */

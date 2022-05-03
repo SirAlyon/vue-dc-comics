@@ -52,7 +52,7 @@ nav{
         color: black;
         font-weight: bold;
         &:hover{
-            color: blue;
+            color: rgba(2, 130, 249, 1);
         }
     }
 }

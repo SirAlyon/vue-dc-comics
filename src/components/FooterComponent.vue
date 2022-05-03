@@ -49,8 +49,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <img src="@/assets/img/dc-logo-bg.png" alt="">
+                    <div class="col-6 p-relative">
+                        <img id="dc_foot_logo" src="@/assets/img/dc-logo-bg.png" alt="">
                     </div>
                 </div>
             </div>
@@ -87,7 +87,6 @@ export default {
 
 <style scoped lang="scss">
     footer{
-        height: 700px;
         color: gray;    
         .footer_top{
             background-image: url('@/assets/img/footer-bg.jpg');
@@ -102,17 +101,27 @@ export default {
         .col-4{
             padding: 0 1rem;
             margin-top: 3rem;
+            margin-bottom: 2rem;
         }
-        img{
-            width: 900px;
+        #dc_foot_logo{
+            width: 550px;
+            position: absolute;
+            //transform: translateX(-100%);
+            right: 50px;
+            top: -100px;
+            z-index: 0;
         }
         ul{
             list-style: none;
             padding: 0;
         }
+        li:hover{
+            color: white;
+        }
         .footer_bot{
             //height: 100px;
             background-color: rgba(48, 48, 48, 1);
+            position: relative;
             img{
                 height: 40px;
                 width: auto;

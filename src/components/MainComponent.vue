@@ -43,10 +43,13 @@ export default {
     .main_content{
         height: 100px;
         background-color: black;
+        color: white;
     }
     .call_to_actions{
         background-color: rgba(2, 130, 249, 1);
         color: white;
+        position: relative;
+        z-index: 2;
         .actions{
         height: 170px;
         display: flex;
