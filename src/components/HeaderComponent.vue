@@ -34,12 +34,10 @@ export default {
 
 
 <style scoped lang="scss">
-header{
-    padding: 1rem;
-}
+
 img{
     align-self: flex-start;
-    padding-left: 1rem;
+    padding: 1rem;
 }
 nav{
     display: flex;
@@ -51,7 +49,11 @@ nav{
         text-decoration: none;
         color: black;
         font-weight: bold;
+        height: 100%;
+        display: flex;
+        align-items: center;
         &:hover{
+            border-bottom: 5px solid rgba(2, 130, 249, 1);
             color: rgba(2, 130, 249, 1);
         }
     }
