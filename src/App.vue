@@ -57,6 +57,10 @@ img{
     flex-grow: 1;
 }
 
+.col-2{
+    width: calc(100% / 12) * 2;
+}
+
 .col-4{
     width: calc(100% / 12) * 4;
 }
@@ -88,6 +92,10 @@ img{
 
 .p-relative{
   position: relative;
+}
+
+.ratio-1{
+  aspect-ratio: 1 / 1;
 }
 
 /* ROOT Colors */
