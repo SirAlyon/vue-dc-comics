@@ -1,17 +1,13 @@
 <template>
     <main>
+        <Jumbotron :thumb="require('@/assets/img/jumbotron.jpg')" />
         <div class="main_content">
             <div class="container">
                 <div class="row">
-                    <div class="col-2" v-for="({thumb, series}, index) in seriesList" :key="index">
-                        <div class="serie-logo">
-                            <img :src="thumb" :alt="series">
-                        </div>
-                        <div class="serie-title">{{series}}</div>
-                    </div>
+                    <Serie :thumb="thumb" :series="series" v-for="({thumb, series}, index) in seriesList" :key="index"/>
                 </div>
             </div>
-        </div>
+        </div>  
         <CallToAction />
     </main>
 </template>
@@ -20,10 +16,16 @@
 
 <script>
 import CallToAction from "@/components/CallToActionComponent.vue";
+import Serie from "@/components/SerieComponent.vue";
+import Jumbotron from "@/components/JumbotronComponent.vue";
+
+
 export default {
     name: 'SiteMain',
     components: {
         CallToAction,
+        Serie,
+        Jumbotron
     },
     data(){
         return{
@@ -113,29 +115,13 @@ export default {
 
 
 <style scoped lang="scss">
+
     .main_content{
         height: 1000px; 
         background-color: black;
         color: white;
         .row{
             margin: 0 -1rem;
-        }
-        .col-2{
-            width: calc(100% / 12) * 2;          
-            padding:1rem;
-            margin-top: 2rem;
-        }
-        img{  
-            width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-            object-position: top;
-            aspect-ratio: 1 / 1;
-            //height: auto;
-        }
-        .serie-title{
-            font-size: 1.2rem;
-            color: white;
         }
     }
 </style>
