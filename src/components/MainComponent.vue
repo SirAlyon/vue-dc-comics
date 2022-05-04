@@ -4,7 +4,7 @@
         <div class="main_content">
             <div class="container">
                 <div class="row">
-                    <Serie :thumb="thumb" :series="series" v-for="({thumb, series}, index) in seriesList" :key="index"/>
+                    <Serie :thumb="thumb" :series="series" :price="price" v-for="({thumb, series, price}, index) in seriesList" :key="index"/>
                     <div class="btn btn_load">LOAD MORE</div>
                 </div>
                 <div class="btn btn_current">CURRENT SERIES</div>
@@ -141,6 +141,10 @@ export default {
                     bottom: -40px;
                     transform: translateX(-50%);
                     padding: 0.5 2rem;
+                    transition: ease-in 0.3s;
+                    &:hover{
+                        border: 1px solid white
+                    }
                 }
         }
         .row{
