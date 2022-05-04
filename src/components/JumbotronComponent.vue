@@ -17,7 +17,12 @@ export default {
 
 <style scoped lang="scss">
     .jumbotron{
-    height: 400px;
+    height: 550px;
     overflow: hidden;
+    img{
+        width: 100%;
+        object-position: top;
+        object-fit: cover;
+    }
     }
 </style>

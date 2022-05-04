@@ -5,8 +5,11 @@
             <div class="container">
                 <div class="row">
                     <Serie :thumb="thumb" :series="series" v-for="({thumb, series}, index) in seriesList" :key="index"/>
+                    <div class="btn btn_load">LOAD MORE</div>
                 </div>
+                <div class="btn btn_current">CURRENT SERIES</div>
             </div>
+
         </div>  
         <CallToAction />
     </main>
@@ -115,13 +118,34 @@ export default {
 
 
 <style scoped lang="scss">
-
     .main_content{
-        height: 1000px; 
+        height: 750px; 
         background-color: black;
         color: white;
+        .container{
+            position: relative; 
+            .btn{
+                padding: 0.7rem 4rem;
+                background-color: rgba(2, 130, 249, 1);
+                position: absolute;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            .btn_current{
+                    transform: translateY(-50%);
+                    top: 0;
+                    left: -15px;
+                }
+                .btn_load{
+                    left: 50%;
+                    bottom: -40px;
+                    transform: translateX(-50%);
+                    padding: 0.5 2rem;
+                }
+        }
         .row{
             margin: 0 -1rem;
+            padding-bottom: 2rem;
         }
     }
 </style>
